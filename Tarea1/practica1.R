@@ -1,5 +1,4 @@
 repetir <- 100
-
 pasos <- 200
 
 library(parallel)
@@ -40,5 +39,5 @@ for (dimension in 1:8)
 
 stopCluster(cluster)
 
-boxplot(data.matrix(datos), use.cols=FALSE, xlab="Dimensión", ylab="Número de regresos al origen", main="Regresos al origen por dimensión")
+boxplot(data.matrix(datos), use.cols=FALSE, xlab="DimensiÃ³n", ylab="NÃºmero de regresos al origen", main="Regresos al origen por dimensiÃ³n")
 
