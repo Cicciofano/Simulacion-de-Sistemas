@@ -52,4 +52,5 @@ boxplot(data.matrix(datos), use.cols=FALSE, xlab="Dimensión", ylab="Número de 
 finT <- Sys.time()
 
 #aquí se muestra el tiempo total que tomó el programa para ejecutarse
+#dato útil para el primer reto
 tiempo <- finT - inicioT
