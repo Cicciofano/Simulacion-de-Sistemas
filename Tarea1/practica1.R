@@ -6,6 +6,8 @@ library(parallel)
 datos <-  data.frame()
 
 experimento <- function(replica) 
+ #esta parte del código se modificó del original
+ #se reemplaza la variable que guarda la distancia alcanzada por una que guarda el número de veces que se regresaba al origen    
   {
    pos <- rep(0, dimension)
    veces <- 0
@@ -39,5 +41,6 @@ for (dimension in 1:8)
 
 stopCluster(cluster)
 
+#gráfica de diagramas caja bigote que muestra las veces que se regresaba al origen por cada dimensión
 boxplot(data.matrix(datos), use.cols=FALSE, xlab="Dimensión", ylab="Número de regresos al origen", main="Regresos al origen por dimensión")
 
