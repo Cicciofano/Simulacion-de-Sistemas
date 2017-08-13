@@ -1,4 +1,4 @@
-#se agregó este contador de tiempo que marca la fecha y hora en que el programa inició
+#se agregó este contador de tiempo que marca la fecha y hora en que el programa inició (útil para analizar el primer reto)
 inicioT <- Sys.time()    
 
 repetir <- 100
