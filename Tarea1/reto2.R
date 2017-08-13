@@ -1,6 +1,6 @@
 inicioT <- Sys.time()    
 
-repetir <- 1000
+repetir <- 100
 pasos <- 2000
 
 library(parallel)
@@ -31,7 +31,7 @@ experimento <- function(replica)
 #esta sección del código se modificó para analizar el reto 2
 #se eliminaron las variables relacionadas con los cluster
 #se usó la función sapply para comparar qué tan ineficiente es el no aprovechar paralelismo 
-for (dimension in 1:8)
+for (dimension in 1:100)
   { 
    resultado <- sapply(1:repetir, experimento)
    datos <- rbind(datos, resultado)
