@@ -5,7 +5,6 @@ nucleos <- 5
 actual <- matrix(rep(0, num), nrow=dim, ncol=dim)
 n <- round(runif(nucleos, 1, num))
 
-
 for (i in 1:nucleos){
   actual[n[i]]=i
 }
@@ -38,13 +37,11 @@ paso <- function(pos) {
   else {return (actual[fila, columna])}
 }
 
-
 cluster <- makeCluster(detectCores() - 1)
 clusterExport(cluster, "dim")
 clusterExport(cluster, "paso")
 
 for (iteracion in 1:50) { 
-  
   clusterExport(cluster, "actual")
   siguiente <- parSapply(cluster, 1:num, paso)
   print(siguiente)
