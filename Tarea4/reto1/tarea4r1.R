@@ -56,8 +56,8 @@ suppressMessages(library(doParallel))
 registerDoParallel(makeCluster(detectCores() - 1))
 
 n <-  40
-for (j in round(c(1, n/4, n/2, (3*n)/4))){
-  for (r in round(c(n/4, n/2, (3*n)/4, n))){ 
+for (a in round(c(1, n/4, n/2, (3*n)/4))){
+  for (b in round(c(n/4, n/2, (3*n)/4, n))){ 
     zona <- matrix(rep(0, n * n), nrow = n, ncol = n)
     k <- 12
     x <- rep(0, k) # ocupamos almacenar las coordenadas x de las semillas
@@ -65,8 +65,8 @@ for (j in round(c(1, n/4, n/2, (3*n)/4))){
     
     for (semilla in 1:k) {
       while (TRUE) { # hasta que hallamos una posicion vacia para la semilla
-        fila <- sample((j):(r), 1)
-        columna <- sample((j):(r), 1)
+        fila <- sample((a):(b), 1)
+        columna <- sample((a):(b), 1)
         if (zona[fila, columna] == 0) {
           zona[fila, columna] = semilla
           x[semilla] <- columna
